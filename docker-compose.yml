@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+    app:
+        build: .
+        command: sh -c "python app.py"
+        # Replace "YOUR_USER" for your Docker Hub user
+        # docker hub is a repository of docker images
+        image: ironpeterram/cicd-real:latest
+        ports:
+            - "80:8000"
